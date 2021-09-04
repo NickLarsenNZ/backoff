@@ -219,6 +219,10 @@ pub mod exponential;
 #[cfg_attr(docsrs, doc(cfg(feature = "futures")))]
 pub mod future;
 
+#[cfg(feature = "macros")]
+#[cfg_attr(docsrs, doc(cfg(feature = "macros")))]
+use backoff_macros;
+
 mod retry;
 
 pub use crate::clock::{Clock, SystemClock};

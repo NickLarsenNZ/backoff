@@ -13,6 +13,11 @@ description = """
 Retry operations with exponential backoff policy.
 """
 
+[workspace]
+members = [
+    "backoff-macros",
+]
+
 [badges]
 travis-ci = { repository = "ihrwein/backoff" }
 
@@ -37,6 +42,7 @@ wasm-bindgen = ["instant/wasm-bindgen", "getrandom/js"]
 futures = ["futures-core", "pin-project"]
 tokio = ["futures", "tokio_1"]
 async-std = ["futures", "async_std_1"]
+macros = []
 
 [[example]]
 name = "async"
