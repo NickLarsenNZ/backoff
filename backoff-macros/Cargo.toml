@@ -1,0 +1,32 @@
+[package]
+name = "backoff-macros"
+version = "0.3.1-alpha.0"
+edition = "2018"
+authors = [
+    "Tibor Benke <ihrwein@gmail.com>",
+    "Nick Larsen <nick@aptiv.co.nz>",
+]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+repository = "https://github.com/ihrwein/backoff"
+homepage = "https://github.com/ihrwein/backoff"
+documentation = "https://docs.rs/backoff"
+categories = ["network-programming"]
+description = """
+Retry operations with exponential backoff policy.
+"""
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+proc-macro = true
+
+[dependencies]
+backoff = { path = ".." }
+proc-macro2 = "1.0.29"
+quote = "1.0.9"
+syn = { version = "1.0.75", features = ["extra-traits"] }
+
+[dev-dependencies]
+pretty_assertions = "0.7.2"
+trybuild = { version = "1.0.45", features = ["diff"] }
